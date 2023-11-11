@@ -40,9 +40,11 @@ export async function POST(req: NextRequest) {
             if (fileId) {
                 assistantOptions.file_ids = [fileId];
             }
-
-            const assistant = await openai.beta.assistants.create(assistantOptions);
-            const assistantId = assistant.id;
+// Comment out assistant create call 
+     //       const assistant = await openai.beta.assistants.create(assistantOptions);
+            //const assistantId = assistant.id;
+// hard code
+            const assistantId = 'asst_jktlTOOMu78nfNq0nD7Bc1ky';
 
             return NextResponse.json({ 
                 message: 'Assistant created successfully', 
